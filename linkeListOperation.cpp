@@ -295,6 +295,25 @@ void search_by_unique_value(int key,struct node* head){
    }
    cout<<"\tValue of "<<key<<" position is "<<i<<endl;
 }
+
+//reverse linked list
+void reverse_linked_list(struct node* &head){
+    struct node* prev=NULL;
+    struct node* current=head;
+    if(head==NULL){
+        cout<<"\tLinked List is Empty"<<endl;
+        return;
+    }
+    struct node* next=head->next;
+    while(true){
+        current->next=prev;
+        prev=current;
+        current=next;
+        if(current==NULL) break;
+        next=next->next;
+    }
+    head=prev;
+}
 //counting length
 int countingLength(struct node*  &head)
 {
@@ -351,10 +370,13 @@ int main()
     cout<<"\tChoice 12: Print Linked List"<<endl;
     cout<<"\tChoice 13: Update by Value"<<endl;
     cout<<"\tChoice 14: Update by Position"<<endl;
+    cout<<"\tChoice 15: Reverse Linked List"<<endl;
     cout<<"\tChoice 00: Exit "<<endl<<endl;
 
     struct node* head=NULL;
-    int choice=2,value,position;
+    int choice,value,position;
+    cout<<"\tNext Choice : ";
+    cin>>choice;
     while(choice!=0)
     {
         switch(choice)
@@ -427,6 +449,9 @@ int main()
             cout<<"\tEnter Value : ";
             cin>>value;
             update_by_position(position,value,head);
+            break;
+        case 15:
+            reverse_linked_list(head);
             break;
         default:
             break;
