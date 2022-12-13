@@ -14,6 +14,7 @@ void insertion_at_tail(int value,struct node* &head);
 int countingLength(struct node* &head);
 void insertion_at_specific_position(int position,int value,struct node* &head);
 void insertion_after_value(int key,int value,struct node* &head);
+void delete_at_tail(struct node* &head);
 
 
 //insertion at tail
