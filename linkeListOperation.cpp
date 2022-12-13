@@ -114,18 +114,6 @@ void insertion_after_value(int key,int value,struct node* &head)
     newNode->next=temp->next;
     temp->next=newNode;
 
-    /*
-    while(temp!=NULL)
-    {
-        temp=temp->next;
-        position++;
-        if(key==temp->data)
-        {
-            break;
-        }
-    }
-    insertion_at_specific_position(position+1,value,head);
-    */
 }
 
 //Deletion from tail
@@ -290,6 +278,23 @@ void update_by_value(int key,int value,struct node* &head){
 
 }
 
+//search by unique value
+void search_by_unique_value(int key,struct node* head){
+   // struct node* temp=head;
+   int i=1;
+   while(head->data!=key){
+    head=head->next;
+        i++;
+        if(head==NULL){
+            break;
+        }
+   }
+   if(head==NULL){
+        cout<<"\t"<<key<<" Not Found"<<endl;
+        return;
+   }
+   cout<<"\tValue of "<<key<<" position is "<<i<<endl;
+}
 //counting length
 int countingLength(struct node*  &head)
 {
@@ -398,6 +403,11 @@ int main()
              cin>>value;
              deletion_by_value(value,head);
              break;
+        case 9:
+            cout<<"\tEnter Key : ";
+            cin>>value;
+            search_by_unique_value(value,head);
+            break;
         case 11:
             cout<<"\tThe Length of Linked List is : "<<countingLength(head)<<endl;
             break;
