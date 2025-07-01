@@ -1,4 +1,4 @@
-//cpp
+//cpps
 #include<bits/stdc++.h>
 #include<conio.h>
 using namespace std;
