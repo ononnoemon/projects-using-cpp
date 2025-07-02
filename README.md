@@ -1,1 +1,1 @@
-linke
+linked list
