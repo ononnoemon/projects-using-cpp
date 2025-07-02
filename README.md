@@ -1,1 +1,1 @@
-linked list practics
+linked list practics -
