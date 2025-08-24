@@ -1,5 +1,4 @@
-//gf
-#include<bits/stdc++.h>
+include<bits/stdc++.h>
 #include<conio.h>
 using namespace std;
 
