@@ -3,7 +3,7 @@
 using namespace std;
 
 
-//crate arra
+//crate array
 int* createArray(int size){
     int* array= new int[size];
     for (int i = 0; i <size; i++)
