@@ -3,7 +3,7 @@
 using namespace std;
 /*
 
- 2D Array Operations
+ 2D Array Operation
 ____________________________________________________________
 1. Create or Take input dynamically 
 2. Read / Traverse
